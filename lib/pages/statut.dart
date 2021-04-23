@@ -8,6 +8,41 @@ class Statut extends StatefulWidget {
 class _StatutState extends State<Statut> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: ListView(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(15),
+            child: Text(
+              'Confidentialité',
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 18,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(15),
+            child: Text(
+              'Statut',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(15),
+            child: TextFormField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Rechercher',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
